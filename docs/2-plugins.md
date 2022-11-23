@@ -1,4 +1,4 @@
-# Step 3: Plugins
+# Step 2: Plugins
 
 We reccomend installing [Packer](https://github.com/hashicorp/packer).
 

@@ -1,4 +1,4 @@
-# Step 2: Configuration
+# Step 1: Configuration
 
 You can configure nvim with vimscript and with Lua.  
 Here we'll use Lua.
@@ -40,6 +40,17 @@ Configure the "leader key" (kinda like a superkey):
 ```lua
 vim.g.map.leader = '<key>'
 ```
+
+Run vim commands:
+```lua
+vim.cmd([[<cmd>]])
+```
+
+To set a color scheme:
+```lua
+vim.cmd([[colorscheme <scheme>]])
+```
+
 
 You can find our configurations in the `examples/` directory of this repo.  
 
