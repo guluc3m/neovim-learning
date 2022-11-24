@@ -36,9 +36,9 @@ vim.keymap.set('<mode>', '<key>', '<map>', '<options>')
 ```
 Where `mode` is the current mode (normal - `n`, insert - `i`, etc.), options is the other options (e.g. `noremap`).
 
-Configure the "leader key" (kinda like a superkey):
+Configure the global variables (vimscript's "let"s):
 ```lua
-vim.g.map.leader = '<key>'
+vim.g.<variable> = '<value>'
 ```
 
 Run vim commands:
@@ -83,6 +83,9 @@ vim.opt.expandtab = true
 vim.opt.shiftwidth = 4
 vim.opt.softtabstop = 4
 vim.opt.tabstop = 4
+
+-- set leader key to space
+vim.g.mapleader = ' '
 
 -- save backups and other trash to another place so you don't see them
 HOME = os.getenv("HOME")
