@@ -1,7 +1,7 @@
 # Useful vim/neovim stuff
 
 By default, neovim works the same as vim, so everything works the same.  
-If you're new to vim, here's a [quick cheatsheet](https://github.com/rajayonin/cheatsheets/blob/main/vim_cheatsheet.md) to learn.  
+If you're new to vim, here's a [quick cheatsheet](https://github.com/rajayonin/cheatsheets/blob/main/vim.md) to learn.  
 Here we'll add some usefull stuff you can use in vim (and neovim).
 
 ## Digraphs
