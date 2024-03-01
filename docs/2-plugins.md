@@ -32,7 +32,7 @@ require("lazy").setup("plugins")
 
 To add any new plugin, just create a new file inside the `plugins` folder. E.g.:
 ```lua
--- which-key.nvim.lua
+-- which-key_nvim.lua
 return {
   -- you can tipically find this code in the instalation instructions of the plugin
   {
@@ -50,6 +50,8 @@ return {
   }
 }
 ```
+
+Note: when installing new plugins, `lazy.nvim` will show an UI. To exit that UI, just use `:q`.
 
 ## Plugins
 We recomend looking through plugins and slowly integrating them if you think it will benefit your workflow/experience.  
