@@ -59,7 +59,7 @@ Here are some of our recomendations:
 
 ### Ease of use
 - [nvim-autopairs](https://github.com/windwp/nvim-autopairs): Automatic brackets.
-- [Comment.nvim](hhttps://github.com/numToStr/Comment.nvim): Easy commenting/uncommenting.
+- [Comment.nvim](https://github.com/numToStr/Comment.nvim): Easy commenting/uncommenting.
 - [todo-comments.nvim](https://github.com/folke/todo-comments.nvim): Browse TODOs, FIXMEs, etc.
 - [which-key.nvim](https://github.com/folke/which-key.nvim): Shows possible key bindings (when needed; configurable)
 
