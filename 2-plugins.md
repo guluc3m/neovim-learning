@@ -1,7 +1,8 @@
 # Step 2: Plugins
+Plugins allow you to extend Neovim's capabilities, and add new features.
 
 ## Package manager
-We recomend using the [lazy.nvim](https://github.com/folke/lazy.nvim) package manager.
+We recomend using the [lazy.nvim](https://github.com/folke/lazy.nvim) package manager to manage all plugins.
 
 To "install" it (download it if it's not already there) and bootstrap it in, add the following to your `~/.config/nvim/init.lua`:
 ```lua
@@ -63,7 +64,9 @@ Here are some of our recomendations:
 - [nvim-autopairs](https://github.com/windwp/nvim-autopairs): Automatic brackets.
 - [Comment.nvim](https://github.com/numToStr/Comment.nvim): Easy commenting/uncommenting.
 - [todo-comments.nvim](https://github.com/folke/todo-comments.nvim): Browse TODOs, FIXMEs, etc.
-- [which-key.nvim](https://github.com/folke/which-key.nvim): Shows possible key bindings (when needed; configurable)
+- [which-key.nvim](https://github.com/folke/which-key.nvim): Shows possible key bindings (when needed; configurable).
+- [AutoIndent.nvim](https://github.com/VidocqH/auto-indent.nvim): Automatic indentation for INSERT mode.
+- [move.nvim](https://github.com/fedepujol/move.nvim): Easily move lines up and down.
 
 ### Files
 - [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim): Fuzzy search files (with previews!).
@@ -81,3 +84,7 @@ Here are some of our recomendations:
 - [nvim-notify](https://github.com/rcarriga/nvim-notify): Fancy notifications.
 - [Catppuccin for (Neo)vim](https://github.com/catppuccin/nvim): Fancy colorschemes (also available for other applications!).
 - [bufferline.nvim](https://github.com/akinsho/bufferline.nvim): Fancy tabs.
+
+### Integrations
+- [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim): Git integrations.
+- [vimtex](https://github.com/lervag/vimtex): $\LaTeX$ integration.

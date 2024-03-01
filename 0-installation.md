@@ -1,4 +1,4 @@
-# Installing neovim
+# Step 0: Installing neovim
 
 This tutorial follows Neovim 0.9.5, and most of the plugins won't work for versions lesser than 0.8. It is recomended to download the latest version.  
 
@@ -51,10 +51,7 @@ If it doesn't come with Neovim (you can check with the `lua -v` comand), install
 According to [Neovim's official webpage](https://neovim.io/doc/user/lua.html#:~:text=Lua%205.1%20is%20the%20permanent%20interface%20for%20Nvim%20Lua), Lua 5.1 is the minimum required version.  
 
 You can also install it through your package manager.  
-For APT, you have to specify the version, e.g.:
-```bash
-sudo apt install lua5.4
-```
+For APT, you have to specify the version, e.g.: `sudo apt install lua5.4`.
 
 
 ## Initial configuration
