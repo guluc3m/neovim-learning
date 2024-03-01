@@ -3,6 +3,53 @@
 ## Package manager
 We recomend using the [lazy.nvim](https://github.com/folke/lazy.nvim) package manager.
 
+To "install" it (download it if it's not already there) and bootstrap it in, add the following to your `~/.config/nvim/init.lua`:
+```lua
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable", -- latest stable release
+    lazypath,
+  })
+end
+vim.opt.rtp:prepend(lazypath)
+```
+
+In order to keep things clean, we'll save all plugin configuration in a `plugins` folder, and create a dummy `init.lua` file:
+```bash
+mkdir ~/.config/nvim/lua/plugins/ && cd ~/.config/nvim/lua/plugins/
+echo return {} > init.lua
+```
+
+And add this line to your `nvim/init.lua` to import your folder:
+```lua
+require("lazy").setup("plugins")
+```
+
+To add any new plugin, just create a new file inside the `plugins` folder. E.g.:
+```lua
+-- which-key.nvim.lua
+return {
+  -- you can tipically find this code in the instalation instructions of the plugin
+  {
+    "folke/which-key.nvim",
+    event = "VeryLazy",
+    init = function()
+      vim.o.timeout = true
+      vim.o.timeoutlen = 300
+    end,
+    opts = {
+      -- your configuration comes here
+      -- or leave it empty to use the default settings
+      -- refer to the configuration section below
+    }
+  }
+}
+```
 
 ## Plugins
 We recomend looking through plugins and slowly integrating them if you think it will benefit your workflow/experience.  
@@ -11,7 +58,8 @@ As with most things, it's often better to slowly build your tools as you adquire
 Here are some of our recomendations:
 
 ### Ease of use
-- [vim-commentary](https://github.com/tpope/vim-commentary): Easy commenting/uncommenting.
+- [nvim-autopairs](https://github.com/windwp/nvim-autopairs): Automatic brackets.
+- [Comment.nvim](hhttps://github.com/numToStr/Comment.nvim): Easy commenting/uncommenting.
 - [todo-comments.nvim](https://github.com/folke/todo-comments.nvim): Browse TODOs, FIXMEs, etc.
 - [which-key.nvim](https://github.com/folke/which-key.nvim): Shows possible key bindings (when needed; configurable)
 
