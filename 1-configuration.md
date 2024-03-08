@@ -63,7 +63,7 @@ Some basic options you can pick and choose from are:
 vim.opt.syntax = enable
 ```
 ```lua
--- copy/paste to system clipboard
+-- copy/paste to system clipboard (requires vim-gtk3)
 vim.opt.clipboard = 'unnamedplus'
 ```
 ```lua
