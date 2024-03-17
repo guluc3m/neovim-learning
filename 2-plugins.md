@@ -31,28 +31,18 @@ And add this line to your `nvim/init.lua` to import your folder:
 require("lazy").setup("plugins")
 ```
 
-To add any new plugin, just create a new file inside the `plugins` folder. E.g.:
+To add any new plugin, just create a new file inside the `plugins` folder.  
+You can tipically find this code in the instalation instructions of the plugin, but they all follow the same overall scheme due to how lazy.nvim works:
 ```lua
--- which-key_nvim.lua
-return {
-  -- you can tipically find this code in the instalation instructions of the plugin
-  {
-    "folke/which-key.nvim",
-    event = "VeryLazy",
-    init = function()
-      vim.o.timeout = true
-      vim.o.timeoutlen = 300
-    end,
-    opts = {
-      -- your configuration comes here
-      -- or leave it empty to use the default settings
-      -- refer to the configuration section below
-    }
-  }
+-- example_nvim.lua
+return {  -- this will be passed to the require("lazy").setup() function
+    "plugin_guy/example.nvim",  -- github repo of the plugin
+    opts = {},  -- [optional] plugin configuration
+    dependencies = {}  -- [optional] plugin dependencies
 }
 ```
 
-Note: when installing new plugins, `lazy.nvim` will show an UI. To exit that UI, just use `:q`.
+Note: when installing new plugins, lazy.nvim will show an UI. To exit that UI, just use `:q`.
 
 ## Plugins
 We recomend looking through plugins and slowly integrating them if you think it will benefit your workflow/experience.  
@@ -67,6 +57,7 @@ Here are some of our recomendations:
 - [which-key.nvim](https://github.com/folke/which-key.nvim): Shows possible key bindings (when needed; configurable).
 - [AutoIndent.nvim](https://github.com/VidocqH/auto-indent.nvim): Automatic indentation for INSERT mode.
 - [move.nvim](https://github.com/fedepujol/move.nvim): Easily move lines up and down.
+- [trouble.nvim](https://github.com/folke/trouble.nvim): Show warnings and errors.
 
 ### Files
 - [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim): Fuzzy search files (with previews!).
@@ -86,5 +77,6 @@ Here are some of our recomendations:
 - [bufferline.nvim](https://github.com/akinsho/bufferline.nvim): Fancy tabs.
 
 ### Integrations
-- [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim): Git integrations.
+- [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim): Basic Git integrations (see which lines are modified, etc.).
+- [neogit](https://github.com/NeogitOrg/neogit): Full Git TUI.
 - [vimtex](https://github.com/lervag/vimtex): $\LaTeX$ integration.
